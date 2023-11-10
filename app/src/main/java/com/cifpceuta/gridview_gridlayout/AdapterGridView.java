@@ -32,13 +32,13 @@ public class AdapterGridView extends ArrayAdapter<Usuario> {
         View rowView = inflador.inflate(R.layout.usuario_item, null, false);
         Usuario alumno = usuarios.get(position);
 
-        ImageView imgVwUsuario;
+        ImageView img;
         TextView tvNombre;
 
-        imgVwUsuario = (ImageView) rowView.findViewById(R.id.imgUsuario);
+        img = (ImageView) rowView.findViewById(R.id.imgVwUsuario);
         tvNombre = (TextView) rowView.findViewById(R.id.tvNombre);
 
-        imgVwUsuario.setImageResource(alumno.getImagenUsuario());
+        img.setImageResource(alumno.getImagenUsuario());
         tvNombre.setText(alumno.getNombreUsuario());
 
         return rowView;
